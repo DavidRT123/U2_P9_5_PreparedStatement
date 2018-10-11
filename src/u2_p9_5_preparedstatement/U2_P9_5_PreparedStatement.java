@@ -38,7 +38,10 @@ public class U2_P9_5_PreparedStatement {
 
         //Filtro para evitar que se introduzcan carácteres no válidos
         if (!resp.equals("1") && !resp.equals("2") && !resp.equals("3")) {
-            System.err.println("INTRODUCE UN VALOR ENTRE 1 y 3");
+            do{
+                System.err.println("INTRODUCE UN VALOR ENTRE 1 y 3");
+                resp = sc.next();
+            }while(!resp.equals("1") && !resp.equals("2") && !resp.equals("3"));
         }
 
         switch (resp) {
